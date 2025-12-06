@@ -1,4 +1,4 @@
-final List<Map<String, String>> dummyMessage = [
+final List<Map<String, String>> dummyChats = [
   {"name": "Joko", "message": "Halo, sudah makan belum?", "time": "07.10"},
   {"name": "Budi", "message": "Besok jadi kan?", "time": "08.22"},
   {"name": "Asep", "message": "Lagi dimana nih?", "time": "09.15"},
@@ -19,4 +19,17 @@ final List<Map<String, String>> dummyMessage = [
   {"name": "Poniman", "message": "Lagi sibuk nih.", "time": "21.55"},
   {"name": "Mulyono", "message": "Besok aku bantu.", "time": "22.13"},
   {"name": "Sumanto", "message": "Oke mantap.", "time": "22.47"},
+];
+
+final List<Map<String, dynamic>> messages = [
+  {"isMe": false, "text": "Halo, apa kabar?", "time": "10:00"},
+  {"isMe": true, "text": "Halo! Kabar baik. Kamu gimana?", "time": "10:01"},
+  {"isMe": false, "text": "Baik juga. Jadi pergi nanti?", "time": "10:02"},
+  {"isMe": true, "text": "Jadi dong, jam berapa?", "time": "10:03"},
+  {
+    "isMe": false,
+    "text": "Jam 7 malam ya di tempat biasa",
+    "time": "10:05",
+  },
+  {"isMe": true, "text": "Oke siap!", "time": "10:06"},
 ];

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tests/data/message.dart';
+import 'package:tests/screens/detail_chat_screen.dart';
 import 'package:tests/utils/color.dart';
 
 class ChatsScreen extends StatefulWidget {
@@ -68,9 +69,9 @@ class _ChatsScreenState extends State<ChatsScreen> {
 
       // Body
       body: ListView.builder(
-        itemCount: 20,
+        itemCount: dummyChats.length,
         itemBuilder: (context, index) {
-          final message = dummyMessage[index];
+          final message = dummyChats[index];
           return ListTile(
             // title
             title: Text(
@@ -90,6 +91,16 @@ class _ChatsScreenState extends State<ChatsScreen> {
 
             // trailing
             trailing: Text(message['time']!),
+
+            // onTap
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailChatScreen(),
+                ),
+              );
+            },
           );
         },
       ),
@@ -100,14 +111,17 @@ class _ChatsScreenState extends State<ChatsScreen> {
         mainAxisAlignment: .end,
         children: [
           FloatingActionButton.small(
+            heroTag: '1',
+            backgroundColor: AppColors.backgroundColor,
             onPressed: () {},
             child: Image.network(
-              height: 20,
-              width: 20
+              height: 30,
+              width: 30,
               'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Meta_AI_Logo_%28Ring_Only%29.png/120px-Meta_AI_Logo_%28Ring_Only%29.png',
             ),
           ),
           FloatingActionButton(
+            heroTag: '2',
             onPressed: () {},
             child: Icon(Icons.message),
           ),

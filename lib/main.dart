@@ -26,6 +26,10 @@ class MyApp extends StatelessWidget {
           backgroundColor: AppColors.backgroundColor,
           indicatorColor: AppColors.teaGreen,
         ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          foregroundColor: AppColors.backgroundColor,
+          backgroundColor: AppColors.green,
+        ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
